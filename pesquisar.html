@@ -1,0 +1,64 @@
+<!doctype HTML>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastrar Registros</title>
+        <style>
+            body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: aliceblue;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.37);
+            text-align: center;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: aliceblue;
+            padding: 30px;
+        }
+        table {
+            margin-top: 40px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid aliceblue;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.37);
+            color: aliceblue;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        </style>
+    </head>
+    <body>
+        <form id="formCad" name="formCad" method="post" action="pesquisar.php">
+            <h3>Pesquisar Registros por Nome</h3>
+            <label for="txtnome">Insira o criterio desejado</label>
+            <input type="text" id="txtnome" name="txtnome" maxlength="40" placeholder="Preencha o nome completo" required/>
+            <br/><br/>
+            <div class="botoes">
+                <input type="submit" value="Pesquisar"/>
+                <input type="reset"  value="Limpar" onClick="document.getElementById('txtnome').focus();"/>
+                <input type="button" value="Menu" onClick='window.history.back();'/>
+            </div>
+        </form>
+    </body>
+</html>

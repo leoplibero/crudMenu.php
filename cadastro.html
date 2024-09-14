@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    form{
+    background-color: rgba(255, 255, 255, 0.37);
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: aliceblue;
+    padding: 30px;
+}
+    </style>
+</head>
+<body>
+    <form id="formCad" name="formCad" method="post" action="cadastro.php">
+        <h1>Cadastro</h1>
+        <div>
+        <label for="txt">Nome: </label>
+        <input type="text" placeholder="Seu nome" name="txnome" id="txtnome" required>
+        </div>
+        <div>
+        <label for="txt">Email: </label>
+        <input type="text" placeholder="Seu email" name="email" required>
+        </div>
+        <div>
+        <label for="txt">Senha: </label>
+        <input type="password" placeholder="Sua senha" name="txsenha" required>
+        </div>
+        <div>
+        <label for="txt">Sexo: </label>
+        <input type="radio" name="txsexo" value="M" checked>
+        <input type="radio" name="txsexo" value="F">
+        </div>
+        <div>
+        <label for="txt">Data nascimento: </label>
+        <input type="date" name="datanans" required>
+        </div>
+
+        <input type="button" value="Voltar" onclick="location.href='menu.html'">
+        <input type="submit" value="Registrar">
+        <input type="reset" value="Limpar" onclick="document.getElementById('txtnome').focus();">
+
+    </form>
+   
+
+    
+</body>
+</html>
